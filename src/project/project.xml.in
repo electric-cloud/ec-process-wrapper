@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exportedData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="commander.xsd" version="61" buildLabel="build_4.2_64287_2013.10.06_06:06:47" buildVersion="4.2.0.0">
+  <exportPath>/projects/ProcessWrapper</exportPath>
+  <project>
+    <projectName>ProcessWrapper</projectName>
+    <description>Provides a procedure that launches an application process and waits for it to complete.  This enables CI triggers, workflow states, and so on to call application processes..</description>
+    <resourceName></resourceName>
+    <workspaceName></workspaceName>
+    <propertySheet>
+      <property>
+        <propertyName>ec_visibility</propertyName>
+        <expandable>1</expandable>
+        <value>pickListOnly</value>
+      </property>
+    </propertySheet>
+    <procedure>
+      <procedureName>ProcessWrapper</procedureName>
+      <description>Launches an application process and waits for it to complete.  This enables CI triggers, workflow states, and so on to call application processes.</description>
+      <resourceName></resourceName>
+      <timeLimit></timeLimit>
+      <timeLimitUnits>minutes</timeLimitUnits>
+      <workspaceName></workspaceName>
+      <propertySheet>
+      </propertySheet>
+      <formalParameter>
+        <formalParameterName>application</formalParameterName>
+        <defaultValue></defaultValue>
+        <description>Name of the application whose process is being launched.</description>
+        <expansionDeferred>0</expansionDeferred>
+        <required>1</required>
+        <type>entry</type>
+      </formalParameter>
+      <formalParameter>
+        <formalParameterName>environment</formalParameterName>
+        <defaultValue></defaultValue>
+        <description>Name of the environment in which to launch the application process.</description>
+        <expansionDeferred>0</expansionDeferred>
+        <required>1</required>
+        <type>entry</type>
+      </formalParameter>
+      <formalParameter>
+        <formalParameterName>parameters</formalParameterName>
+        <defaultValue></defaultValue>
+        <description>Parameters to the application process in the format passed to an ec-perl runProcess call.  Required parameters to the starting state must be specified or the process won't be launched.  Example:&#10;&#10;{actualParameterName =&gt; "ec_MyComponent-version", value =&gt; "1.2.3"},&#10;{actualParameterName =&gt; "ec_smartDeployOption", value =&gt; 0},</description>
+        <expansionDeferred>0</expansionDeferred>
+        <required>0</required>
+        <type>textarea</type>
+      </formalParameter>
+      <formalParameter>
+        <formalParameterName>process</formalParameterName>
+        <defaultValue>Deploy</defaultValue>
+        <description>Name of the application process to launch.</description>
+        <expansionDeferred>0</expansionDeferred>
+        <required>0</required>
+        <type>entry</type>
+      </formalParameter>
+      <formalParameter>
+        <formalParameterName>project</formalParameterName>
+        <defaultValue>Default</defaultValue>
+        <description>Name of the project in which the application has been created.</description>
+        <expansionDeferred>0</expansionDeferred>
+        <required>0</required>
+        <type>entry</type>
+      </formalParameter>
+      <formalParameter>
+        <formalParameterName>timeout</formalParameterName>
+        <defaultValue>300</defaultValue>
+        <description>Number of seconds to wait for the job to complete before timing out.</description>
+        <expansionDeferred>0</expansionDeferred>
+        <required>0</required>
+        <type>entry</type>
+      </formalParameter>
+      <step>
+        <stepName>Launch</stepName>
+        <alwaysRun>0</alwaysRun>
+        <broadcast>0</broadcast>
+        <command>PLACEHOLDER</command>
+        <condition></condition>
+        <description></description>
+        <errorHandling>abortProcedure</errorHandling>
+        <exclusiveMode>none</exclusiveMode>
+        <logFileName></logFileName>
+        <parallel>0</parallel>
+        <postProcessor>postp</postProcessor>
+        <precondition></precondition>
+        <releaseMode>none</releaseMode>
+        <resourceName></resourceName>
+        <shell>ec-perl</shell>
+        <timeLimit></timeLimit>
+        <timeLimitUnits>minutes</timeLimitUnits>
+        <workingDirectory></workingDirectory>
+        <workspaceName></workspaceName>
+        <propertySheet>
+        </propertySheet>
+      </step>
+    </procedure>
+  </project>
+</exportedData>

@@ -1,0 +1,8 @@
+<project name="ProcessWrapper" default="package" basedir=".">
+  <description>Build the ProcessWrapper plugin</description>
+  <property name="pluginKey" value="ProcessWrapper" />
+  <property name="pluginVersion" value="1.0.0" />
+  <property name="gwt.path.extras" value="extras" />
+
+  <import file="${SDKROOT}/build/buildTargets.xml" />
+</project>
